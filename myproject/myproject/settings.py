@@ -117,6 +117,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATIC_ROOT = "/tmp/robots/static/"
+
 STATICFILES_DIRS = [
     BASE_DIR / "staticfiles",
 ]

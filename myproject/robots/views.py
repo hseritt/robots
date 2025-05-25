@@ -1,90 +1,13 @@
 from django.shortcuts import render
 from django.views import View
 import random
+from .settings import ROBOT_NAMES, ROBOT_BIOS
 
 
 class RobotsView(View):
     def get(self, request):
-        names = [
-            "Zorpax",
-            "Blaster",
-            "Z99",
-            "Wigglybot",
-            "Grobnar",
-            "Clunkface",
-            "Snargle",
-            "Unit-X",
-            "XJ-13",
-            "Torque",
-            "Fizzix",
-            "Dr. Gearbox",
-            "Boltimus Prime",
-            "Captain Sprocket",
-            "Buzzkill-9000",
-            "RAMzilla",
-            "Sir Sparks-a-Lot",
-            "Widgetron",
-            "Nebulon-8",
-            "Chonkbyte",
-            "Glitch McSwitch",
-            "D.A.N.G.E.R.",
-            "Beta Crankshaft",
-            "Pixel Beast",
-            "Rivetz",
-            "Mojo-Tron",
-            "Muffin Loader",
-            "CyberSpank",
-            "Toasty Core",
-            "Mr. Resistor",
-            "Zigzag McZap",
-            "Mecha Marmot",
-            "Professor Bootloop",
-            "YOLO-500",
-            "Spamjammer",
-            "Nullbyte the Wobbler",
-        ]
-
-        bios = [
-            "Thinks it's a toaster.",
-            "Once hacked a vending machine for snacks.",
-            "Allergic to magnets.",
-            "Dreams of becoming a microwave.",
-            "Built entirely from spare parts and regret.",
-            "Certified in robot yoga.",
-            "Sings binary lullabies.",
-            "Speaks fluent Klingon.",
-            "Competes in underground robot dance-offs.",
-            "Frequently mistaken for a lamp.",
-            "Can juggle circuit boards.",
-            "Wrote its own autobiography in hex.",
-            "Once tried to make coffee with engine oil.",
-            "Thinks Wi-Fi is a conspiracy.",
-            "Moonlights as a disco ball.",
-            "Installed its own sarcasm module.",
-            "Collects rusty screws for fun.",
-            "Has beef with the Roomba.",
-            "Watches soap operas through satellite dishes.",
-            "Thinks duct tape is a fashion statement.",
-            "Powered entirely by spite and AA batteries.",
-            "Has an emotional support blender.",
-            "Refuses to use metric system.",
-            "Cries when it hears dial-up noises.",
-            "Won a staring contest with a webcam.",
-            "Likes long walks on the motherboard.",
-            "Was raised by vacuum cleaners.",
-            "Keeps trying to reboot the sun.",
-            "Banned from three arcades for cheating.",
-            "Still runs on Windows 95 out of spite.",
-            "Has a secret tattoo of QR codes.",
-            "Replaced its heart with a USB stick.",
-            "Can only speak in emoji during thunderstorms.",
-            "Has trust issues with wall outlets.",
-            "Fails every CAPTCHA on purpose.",
-            "Regularly forgets its own IP address.",
-        ]
-
-        selected_names = random.sample(names, 10)
-        selected_bios = random.sample(bios, 10)
+        selected_names = random.sample(ROBOT_NAMES, 10)
+        selected_bios = random.sample(ROBOT_BIOS, 10)
 
         images = [
             {

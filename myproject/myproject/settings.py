@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-ifj)#9x#-k&4w_jfromx#fq7jbwk!v$gx+tc%^z^1mq34cd!y_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["robots.prodigi.us"]
+ALLOWED_HOSTS = ["robots.prodigi.us", "localhost"]
 
 
 # Application definition

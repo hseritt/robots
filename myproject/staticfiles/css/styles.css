@@ -85,6 +85,8 @@ h1 {
 }
 
 .robot-card {
+  width: 100%;
+  max-width: 350px; /* ✅ Add this */
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
